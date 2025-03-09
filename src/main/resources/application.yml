@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: FlashcardsApp
+  h2:
+    console:
+      path: /my-h2-console
+  datasource:
+    url: jdbc:h2:file:./db/dictionary;
+    username: tpo
+    password: tposhechka
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  banner:
+    location: logo-app
+    charset: utf-8
+  profiles:
+    active: CAP
+pl:
+  edu:
+    pja:
+      tpo02:
+        filename: src/main/resources/dictionary.csv
